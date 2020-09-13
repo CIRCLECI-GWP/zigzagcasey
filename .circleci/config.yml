@@ -19,7 +19,7 @@ jobs:
       - ruby/install-deps
       - run:
           name: Publish gem to Rubygems
-          command: mv config .git/config && bundle exec rake release
+          command: bash .circleci/publish.sh
 workflows:
   version: 2
   test-and-deploy:
